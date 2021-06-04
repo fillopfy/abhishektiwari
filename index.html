@@ -171,10 +171,10 @@
   function myFunction() {
     var a=document.getElementById("exampleFormControlInput1").value;
     var b=document.getElementById("exampleFormControlTextarea1").value;
-    if(!validateEmail(a)){
-      document.getElementById("demo").innerHTML = "Invalid email";
-    }else if(a.length==0 || b.length==0){
+    if(a.length==0 || b.length==0){
       document.getElementById("demo").innerHTML = "Please fill all entries";
+    }else if(!validateEmail(a)){
+      document.getElementById("demo").innerHTML = "Invalid email";
     }else
     document.getElementById("demo").innerHTML = "Submitted";
   }
